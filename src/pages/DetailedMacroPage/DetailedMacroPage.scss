@@ -1,0 +1,151 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.detail-page {
+  margin: 1rem;
+
+  &__huge-container {
+    @include desktop {
+      max-width: 1216px;
+      margin: 0 auto;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+
+    @include desktop {
+      flex-direction: row;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+
+  &__box {
+    background-color: rgba(226, 110, 92, 0.16);
+    border-radius: 10px;
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+    @include desktop {
+      margin-bottom: 1rem;
+      height: 360px;
+      width: 49%;
+    }
+  }
+
+  &__first-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  &__third-box {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+    @include desktop {
+      height: auto;
+    }
+  }
+
+  &__heading-wrap {
+    display: flex;
+    margin-top: 1rem;
+    @include tablet {
+      justify-content: space-between;
+      align-items: center;
+      margin-top: 2rem;
+    }
+  }
+
+  .detail-page__heading {
+    margin-bottom: 1rem;
+    margin-top: 0.5rem;
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  .detail-page__back-icon-wrapper {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+  }
+
+  &__value {
+    display: flex;
+    gap: 1rem;
+    background-color: rgba(226, 110, 92, 0.2);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__explain {
+    padding: 0 1rem;
+    p {
+      margin: 0;
+    }
+  }
+
+  &__field {
+    font-weight: 600;
+  }
+
+  &__wrapper-chart {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(226, 110, 92, 0.16);
+    border-radius: 10px;
+    padding: 1rem 4rem;
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+    @include desktop {
+      width: 49%;
+      height: 352px;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__wrapper-line-chart {
+    display: flex;
+    justify-content: center;
+    background-color: rgba(226, 110, 92, 0.16);
+    border-radius: 10px;
+    padding: 1rem;
+    @include tablet {
+      margin-bottom: 1.5rem;
+    }
+    @include desktop {
+      height: 360px;
+      width: 49%;
+      margin-bottom: 1rem;
+    }
+  }
+
+  &__box--activate {
+    animation: boxAnimation 0.5s;
+    backdrop-filter: blur(20px);
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(255, 255, 240, 0.277);
+  }
+
+  @include tablet {
+    margin: 2rem;
+  }
+}

@@ -1,0 +1,105 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.macro-item {
+  &__wrapper:link,
+  &__wrapper:hover,
+  &__wrapper:active,
+  &__wrapper:visited {
+    color: $Text-Color;
+    text-decoration: none;
+  }
+
+  &__container {
+    display: flex;
+    padding: 0 1rem;
+    justify-content: space-between;
+    border-top: 1px solid rgba(128, 128, 128, 0.162);
+    align-items: center;
+    &:hover {
+      background-color: $Row-Hover;
+      border-radius: 10px;
+    }
+    &:first-child {
+      border: none;
+    }
+    @include tablet {
+      padding: 0 2rem;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 66%;
+    padding: 1.5rem 0;
+    @include small-mobile {
+      width: 67%;
+    }
+    @include tablet {
+      padding: 2rem 0;
+      width: 85%;
+    }
+  }
+
+  &__text {
+    margin: 0;
+    text-align: left;
+    padding-left: 0.2rem;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow: hidden;
+    &:first-child {
+      width: 125px;
+      padding-left: 0;
+    }
+    &:nth-child(2) {
+      width: 140px;
+      padding-left: 0;
+    }
+    &:nth-child(3) {
+      width: 135px;
+    }
+    &:nth-child(4) {
+      width: 130px;
+    }
+  }
+
+  &__text--hidden {
+    display: none;
+    @include tablet {
+      display: block;
+    }
+  }
+
+  &__text--energy-hidden {
+    display: none;
+    @include small-mobile {
+      display: block;
+    }
+  }
+
+  &__icons {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 1rem;
+    width: 33%;
+    @include small-mobile {
+      width: 33%;
+    }
+    @include tablet {
+      width: 15%;
+    }
+  }
+
+  &__icon {
+    cursor: pointer;
+    width: 30px;
+  }
+
+  &__icon-edit {
+    width: 35px;
+  }
+}

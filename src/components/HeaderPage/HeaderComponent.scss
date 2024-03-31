@@ -1,0 +1,98 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.header-page {
+  background-color: #2b3a55;
+  padding-left: 1rem;
+  padding-right: 1rem;
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 70px;
+    @include tablet {
+      flex-direction: row;
+    }
+    @include desktop {
+      max-width: 1216px;
+      margin: 0 auto;
+    }
+  }
+
+  &__user-profile-pic {
+    width: 30px;
+    @include tablet {
+      width: 36px;
+    }
+  }
+
+  &__wrapper {
+    display: flex;
+    justify-content: right;
+    gap: 1rem;
+    align-items: center;
+    width: 150px;
+    @include tablet {
+      width: 280px;
+    }
+  }
+
+  &__profile-link {
+    width: 36px;
+  }
+
+  &__build-macro,
+  &_recipe-library {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__track,
+  &__macro-list,
+  &__recipe-list {
+    display: none;
+    @include desktop {
+      display: block;
+    }
+  }
+
+  &__link:link,
+  &__link:active,
+  &__link:hover,
+  &__link:visited {
+    text-decoration: none;
+    color: #ffffff;
+    cursor: pointer;
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__text {
+    color: #ffffff;
+    cursor: pointer;
+    @include tablet {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__menu {
+    width: 35px;
+    margin-right: 5px;
+    @include small-mobile {
+      margin-right: 115px;
+    }
+    @include tablet {
+      margin-right: 240px;
+      width: 40px;
+    }
+  }
+
+  @include tablet {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+}

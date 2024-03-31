@@ -1,0 +1,47 @@
+@use "../../styles/partials/variables" as *;
+@use "../../styles/partials/mixins" as *;
+
+.logo {
+  width: 150px;
+  @include tablet {
+    width: 170px;
+  }
+  @include desktop {
+    width: 190px;
+  }
+
+  &--header-page {
+    margin: 0 auto;
+    @include desktop {
+      margin: inherit;
+    }
+  }
+
+  &--site-footer-mobile {
+    @include tablet {
+      display: none;
+    }
+  }
+
+  &--site-footer-tablet {
+    display: none;
+    @include tablet {
+      display: block;
+      padding-left: 1rem;
+    }
+  }
+
+  &--header-page {
+    margin: 0 auto;
+    width: 100px;
+    @include small-mobile {
+      width: 135px;
+    }
+    @include tablet {
+      width: 170px;
+    }
+    @include desktop {
+      width: 200px;
+    }
+  }
+}
